@@ -4,7 +4,11 @@ Passo a passo da configuração de um ambiente quiosque usando o Registro do Win
 ## 1. Criação de um usuário local, sem acesso de admin e sem senha
 [Criar um usuário local ou conta de administrador no Windows](https://support.microsoft.com/pt-br/windows/criar-um-usu%C3%A1rio-local-ou-conta-de-administrador-no-windows-20de74e0-ac7f-3502-a866-32915af2a34d#:~:text=11Windows%2010-,Criar%20uma%20conta%20de%20usu%C3%A1rio%20local,outro%20usu%C3%A1rio%2C%20selecione%20Adicionar%20conta.)
 
-## 2. Configurações iniciais do ambiente
+## 2. Fazer uma backup do registro atual
+
+[Como fazer o backup e a restauração do Registro no Windows](https://support.microsoft.com/pt-br/topic/como-fazer-o-backup-e-a-restaura%C3%A7%C3%A3o-do-registro-no-windows-855140ad-e318-2a13-2829-d428a2ab0692)
+
+## 3. Configurações iniciais do ambiente
 
 [Preparar um dispositivo para a configuração de quiosque](https://learn.microsoft.com/pt-br/windows/configuration/kiosk-prepare)
 
@@ -54,7 +58,7 @@ Configuração:
 
 DenyRemovableDevices: 1
 
-### 3. Restrições ao usuário quiosque
+### 4. Restrições ao usuário quiosque
 
 [Políticas impostas em dispositivos de quiosque](https://learn.microsoft.com/pt-br/windows/configuration/kiosk-policies)
 
