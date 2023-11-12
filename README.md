@@ -110,5 +110,11 @@ HKEY_USERS\S-1-5-21-2276003742-892242862-2213583387-1002
 
 ## 6. Executar o edge em modo quiosque no startup do computador
 
+Adicionar na chave:
 
+Computer\HKEY_USERS\[User SID]\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+
+a entrada Edge, com o valor do formato string:
+
+"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --kiosk udesc.br --edge-kiosk-type=fullscreen
 
