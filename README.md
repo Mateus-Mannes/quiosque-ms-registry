@@ -58,7 +58,7 @@ Configuração:
 
 DenyRemovableDevices: 1
 
-### 4. Restrições ao usuário quiosque
+## 4. Restrições ao usuário quiosque
 
 [Políticas impostas em dispositivos de quiosque](https://learn.microsoft.com/pt-br/windows/configuration/kiosk-policies)
 
@@ -71,7 +71,7 @@ No caso exemplicado, temos:
 HKEY_USERS\S-1-5-21-2276003742-892242862-2213583387-1002
 
 
-#### Retrições de explorador de arquivos, barra de tarefas e página incial
+### Retrições de explorador de arquivos, barra de tarefas e página incial
 - **Localização no Registro**: `Computer\HKEY_USERS\[User SID]\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer`
 - **Configurações**:
   - Remover o acesso aos menus de contexto para a barra de tarefas: `NoTrayContextMenu` (DWORD 32 bits): `1`
@@ -86,6 +86,9 @@ HKEY_USERS\S-1-5-21-2276003742-892242862-2213583387-1002
   - Remover a lista Todos os Programas do menu Iniciar: `NoStartMenuMorePrograms` (DWORD 32 bits): `1`
   - Impedir o acesso a unidades de Meu Computador: `NoViewOnDrive` (DWORD 32 bits): `67108863`
 
+- **Localização no Registro**: `Computer\HKEY_USERS\[User SID]\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer`
+- **Configurações**:
+
 - **Localização no Registro**: `Computer\HKEY_USERS\[User SID]\SOFTWARE\Policies\Microsoft\Windows\Explorer`
 - **Configurações**:
   - Impedir que os usuários desinstalem aplicativos da tela inicial: `NoUninstallFromStart` (DWORD 32 bits): `1`
@@ -95,10 +98,17 @@ HKEY_USERS\S-1-5-21-2276003742-892242862-2213583387-1002
   - Remover Notificações e a Central de Ações: `DisableNotificationCenter` (DWORD 32 bits): `1`
   - Remover os programas fixados da barra de tarefas: `TaskbarNoPinnedList` (DWORD 32 bits): `1`
 
-#### Políticas de Sistema (System Policies)
+### Políticas de Sistema (System Policies)
 - **Localização no Registro**: `Computer\HKEY_USERS\[User SID]\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System`
 - **Configurações**:
   - Remover o Gerenciador de Tarefas: `DisableTaskMgr` (DWORD 32 bits): `1`
   - Remover a opção de Alterar Senha na interface do usuário de Opções de Segurança: `DisableChangePassword` (DWORD 32 bits): `1`
+
+## 5. Usar o app locker para permitir que o usuário quiosque execute apenas o edge dos programas instalados
+
+[Usar o AppLocker para criar um quiosque do Windows 10 que execute vários aplicativos](https://learn.microsoft.com/pt-br/windows/configuration/lock-down-windows-10-applocker)
+
+## 6. Executar o edge em modo quiosque no startup do computador
+
 
 
